@@ -49,7 +49,7 @@
   .form {
     display: grid;
     grid-template-columns : 1fr 1fr 1fr;
-
+    margin-bottom: 25px;
   }
 
   label {
@@ -60,7 +60,7 @@
 
   input {
     display: block;
-    width: 80%;
+    width: 70%;
     height: 40px;
     border-radius: 5px;
     border: 2px solid hsl(0, 0%, 86%);
@@ -71,17 +71,40 @@
     padding-left: 10px;
   }
 
+  .separator {
+    position: relative;
+    height: 50px;
+    margin: 10px 0;
+  }
+
   hr {
-    color: hsl(0, 1%, 44%);
-    background-color: hsl(0, 1%, 44%);
-    border: 1px solid hsl(0, 1%, 44%);;
+    position: absolute;
+    width: 97%;
+    margin: 25px 0;
+    background: hsl(0, 1%, 44%);;
   }
 
   .icon-arrow {
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    display: block;
     background-color: hsl(259, 100%, 65%);
     padding: 15px;
     width: 20px;
+    left: 40%;
     border-radius: 50%;
+  }
+
+  .cont {
+    display: flex;
+    font-size: 50px;
+    font-family: Poppins-ExtraBoldItalic;
+  }
+
+  .num {
+    color: hsl(259, 100%, 65%);
+    margin-right: 5px;
   }
   
   .attribution { font-size: 11px; text-align: center; }
