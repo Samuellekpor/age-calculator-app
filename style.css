@@ -89,7 +89,7 @@
     position: absolute;
     width: 97%;
     margin: 25px 0;
-    background: hsl(0, 1%, 44%);;
+    background: hsl(0, 1%, 62%);
   }
 
   .icon-arrow {
@@ -112,13 +112,44 @@
   .cont {
     display: flex;
     font-size: 50px;
-    font-family: Poppins-ExtraBoldItalic;
+    font-family: Poppins-ExtraBoldItalic, sans-serif;
   }
 
   .num {
     color: hsl(259, 100%, 65%);
     margin-right: 5px;
   }
+
+@media (min-width: 768px) {
+  .big-container {
+    width: 520px; 
+    margin: 90px auto;
+    padding: 40px 40px;
+  }
+
+  .form {
+    margin: 0 120px 0 0;
+  }
+
+  .separator {
+    margin-top: 0;
+  }
+
+  hr {
+    margin: 30px 0;
+  }
+
+  .icon-arrow {
+    right: 0;
+    margin-right: 0;
+    width: 30px;
+  }
+
+  .cont {
+    font-size: 70px;
+    margin-bottom: -25px;
+  }
+}
   
   .attribution { font-size: 11px; text-align: center; }
   .attribution a { color: hsl(228, 45%, 44%); }
