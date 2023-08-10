@@ -52,13 +52,13 @@
     margin-bottom: 25px;
   }
 
-  label {
+  .labels {
     text-transform: uppercase;
     color: hsl(0, 1%, 44%);
     font-family: Poppins-bold, sans-serif;
   }
 
-  input {
+  .inputs {
     display: block;
     width: 70%;
     height: 40px;
