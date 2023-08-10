@@ -16,16 +16,19 @@
   <div class="big-container">
     <form action="submit" class="form">
       <div class="date-container">
-        <label for="day">Day</label>
-        <input type="number" name="day" id="day" placeholder="DD">
+        <label class="labels" for="day">Day</label>
+        <input type="number" name="day" class="inputs" id="day" placeholder="DD">
+        <span id="reqDay" class="errorState"></span>
       </div>
       <div class="date-container">
-        <label for="month">Month</label>
-        <input type="number" name="month" id="month" placeholder="MM">
+        <label class="labels" for="month">Month</label>
+        <input type="number" name="month" class="inputs" id="month" placeholder="MM">
+        <span id="reqMonth" class="errorState"></span>
       </div>
       <div class="date-container">
-        <label for="day">Year</label>
-        <input type="number" name="year" id="year" placeholder="YYYY">
+        <label class="labels" for="year">Year</label>
+        <input type="number" name="year" class="inputs" id="year" placeholder="YYYY">
+        <span id="reqYear" class="errorState"></span>
       </div>
     </form>
     <div class="separator">

@@ -1,11 +1,16 @@
-const day_field = document.getElementById('day');
-const month_field = document.getElementById('month');
-const year_field = document.getElementById('year');
+const dayField = document.getElementById('day');
+const monthField = document.getElementById('month');
+const yearField = document.getElementById('year');
 const arrow = document.querySelector('.icon-arrow');
+const reqDay = document.getElementById('reqDay');
+const reqMonth = document.getElementById('reqMonth');
+const reqYear = document.getElementById('reqYear');
+const labels = document.querySelectorAll('.labels');
+const inputs = document.querySelectorAll('.inputs');
 
 arrow.addEventListener('click', () => {
-  const dateformat = /^(0?[1-9]|[1-2][0-9]|3[01])[\/](0?[1-9]|1[0-2])/;
-  const date = `${day_field.value}/${month_field.value}/${year_field.value}`;
+  const dateformat = /^(\d{1,2})-(\d{1,2})-(\d{4})$/;
+  const date = `${dayField.value}-${monthField.value}-${yearField.value}`;
 
   // Matching the date through regular expression
   if (date.match(dateformat)) {
@@ -41,9 +46,25 @@ arrow.addEventListener('click', () => {
       }
     }
   } else {
+    labels.forEach(label => {
+      label.style.color = 'hsl(0, 100%, 67%)';
+    });
+    inputs.forEach(input => {
+      input.style.border = '1px solid hsl(0, 100%, 67%)';
+    });
+    if (dayField.value.trim() === '') {
+      reqDay.innerHTML = 'This field is required'
+    }
+    if (monthField.value.trim() === '') {
+      reqMonth.innerHTML = 'This field is required'
+    }
+    if (yearField.value.trim() === '') {
+      reqYear.innerHTML = 'This field is required'
+    }
     console.log('Invalid date format!');
     return false;
   }
   console.log('Valid date');
+  console.log(date);
   return true;
 });
