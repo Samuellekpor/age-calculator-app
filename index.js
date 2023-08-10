@@ -8,18 +8,22 @@ const reqYear = document.getElementById('reqYear');
 const labels = document.querySelectorAll('.labels');
 const inputs = document.querySelectorAll('.inputs');
 
+function isDateInPast(date) {
+  return new Date(date.toDateString()) < new Date(new Date().toDateString());
+}
+
 arrow.addEventListener('click', () => {
   const dateformat = /^(\d{1,2})-(\d{1,2})-(\d{4})$/;
   const date = `${dayField.value}-${monthField.value}-${yearField.value}`;
 
   // Matching the date through regular expression
   if (date.match(dateformat)) {
-    const operator = date.split('/');
+    const operator = date.split('-');
 
     // Extract the string into month, date and year
     let datepart = [];
     if (operator.length > 1) {
-      datepart = date.split('/');
+      datepart = date.split('-');
     }
     const day = parseInt(datepart[0]);
     const month = parseInt(datepart[1]);
@@ -30,7 +34,7 @@ arrow.addEventListener('click', () => {
     if (month === 1 || month > 2) {
       if (day > ListofDays[month - 1]) {
         // to check if the date is out of range
-        console.log('Invalid date');
+        reqDay.innerHTML = 'Must be a valid day';
         return false;
       }
     } else if (month === 2) {
@@ -41,9 +45,14 @@ arrow.addEventListener('click', () => {
         return false;
       }
       if ((leapYear === true) && (day > 29)) {
+        reqDay.innerHTML = 'Must be a valid day';
         console.log('Invalid date format!');
         return false;
       }
+    }
+    if(!isDateInPast(new Date(date))) {
+      reqYear.innerHTML = 'Must be in the past';
+      return false;
     }
   } else {
     labels.forEach(label => {
