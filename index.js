@@ -7,6 +7,9 @@ const reqMonth = document.getElementById('reqMonth');
 const reqYear = document.getElementById('reqYear');
 const labels = document.querySelectorAll('.labels');
 const inputs = document.querySelectorAll('.inputs');
+const yearsNum = document.querySelector('.years-num');
+const monthsNum = document.querySelector('.months-num');
+const daysNum = document.querySelector('.days-num');
 
 function addErrorState(){
   labels.forEach(label => {
@@ -99,5 +102,19 @@ arrow.addEventListener('click', () => {
   removeErrorState();
   console.log('Valid date');
   console.log(date);
+  // set maximum date to today
+  realDate.max = new Date().toISOString().split('T')[0];
+  // calculate exact year gap
+  var years;
+  if ( today.getMonth() > birthDate.getMonth() ||
+      ( today.getMonth() == birthDate.getMonth() &&
+        today.getDate() >= birthDate.getDate()
+      )
+    ) {
+    years = today.getFullYear() - birthDate.getFullYear();
+  }
+  else {
+    years = today.getFullYear() - birthDate.getFullYear() - 1;
+  }
   return true;
 });
