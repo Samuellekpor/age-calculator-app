@@ -101,8 +101,6 @@ arrow.addEventListener('click', () => {
     return false;
   }
   removeErrorState();
-  // set maximum date to today
-  realDate.max = new Date().toISOString().split('T')[0];
   // calculate exact year gap
   let years;
   let months;
