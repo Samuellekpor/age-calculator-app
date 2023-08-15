@@ -105,16 +105,37 @@ arrow.addEventListener('click', () => {
   // set maximum date to today
   realDate.max = new Date().toISOString().split('T')[0];
   // calculate exact year gap
-  var years;
-  if ( today.getMonth() > birthDate.getMonth() ||
-      ( today.getMonth() == birthDate.getMonth() &&
-        today.getDate() >= birthDate.getDate()
+  let years;
+  let months;
+  var days;
+  if ( today.getMonth() > realDate.getMonth() ||
+      ( today.getMonth() == realDate.getMonth() &&
+        today.getDate() >= realDate.getDate()
       )
     ) {
-    years = today.getFullYear() - birthDate.getFullYear();
+    years = today.getFullYear() - realDate.getFullYear();
   }
   else {
-    years = today.getFullYear() - birthDate.getFullYear() - 1;
+    years = today.getFullYear() - realDate.getFullYear() - 1;
   }
+
+  // calculate exact month gap
+
+  if (today.getDate() >= realDate.getDate()) {
+    months = today.getMonth() - realDate.getMonth();
+  }
+  else if (today.getDate() < realDate.getDate()) {
+    months = today.getMonth() - realDate.getMonth() - 1;
+  }
+  // make month positive
+  months = months < 0 ? months + 12 : months;
+
+  // calculate exact day gap
+  if (today.getDate() >= realDate.getDate()) {
+    days = today.getDate() - realDate.getDate();
+  } else {
+    days = today.getDate() - realDate.getDate() + ListofDays[realDate.getMonth()];
+  }
+
   return true;
 });
