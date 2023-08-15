@@ -1,139 +1,140 @@
-  * {
-    margin: 0;
-    padding: 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
 
-  @font-face {
-    font-family: Poppins-bold;
-    src: url('./assets/fonts/Poppins-Bold.ttf');
-  }
-  
-  @font-face {
-    font-family: Poppins-boldItalic;
-    src: url('./assets/fonts/Poppins-BoldItalic.ttf');
-  }
-  
-  @font-face {
-    font-family: Poppins-ExtraBold;
-    src: url('./assets/fonts/Poppins-ExtraBold.ttf');
-  }
+@font-face {
+  font-family: Poppins-bold;
+  src: url('./assets/fonts/Poppins-Bold.ttf');
+}
 
-  @font-face {
-    font-family: Poppins-ExtraBoldItalic;
-    src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf');
-  }
-  
-  @font-face {
-    font-family: Poppins-Italic;
-    src: url('./assets/fonts/Poppins-Italic.ttf');
-  }
-  
-  @font-face {
-    font-family: Poppins-Regular;
-    src: url('./assets/fonts/Poppins-Regular.ttf');
-  }
+@font-face {
+  font-family: Poppins-boldItalic;
+  src: url('./assets/fonts/Poppins-BoldItalic.ttf');
+}
 
-  body {
-    background-color: hsl(0, 0%, 86%);
-    font-family: Poppins-Regular, sans-serif;
-  }
+@font-face {
+  font-family: Poppins-ExtraBold;
+  src: url('./assets/fonts/Poppins-ExtraBold.ttf');
+}
 
-  .big-container {
-    background-color: white;
-    margin: 50px 10px;
-    border-radius: 5%;
-    border-bottom-right-radius: 25%;
-    padding: 40px 20px;
-  }
+@font-face {
+  font-family: Poppins-ExtraBoldItalic;
+  src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf');
+}
 
-  .form {
-    display: grid;
-    grid-template-columns : 1fr 1fr 1fr;
-    margin-bottom: 25px;
-  }
+@font-face {
+  font-family: Poppins-Italic;
+  src: url('./assets/fonts/Poppins-Italic.ttf');
+}
 
-  .labels {
-    text-transform: uppercase;
-    color: hsl(0, 1%, 44%);
-    font-family: Poppins-bold, sans-serif;
-  }
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('./assets/fonts/Poppins-Regular.ttf');
+}
 
-  .inputs {
-    display: block;
-    width: 70%;
-    height: 40px;
-    border-radius: 5px;
-    border: 2px solid hsl(0, 0%, 86%);
-    margin-top: 5px;
-    margin-bottom: -5px;
-    color: hsl(0, 0%, 8%);
-    font-family: Poppins-ExtraBold, sans-serif;
-    font-size: 20px;
-    padding-left: 10px;
-  }
+body {
+  background-color: hsl(0, 0%, 86%);
+  font-family: Poppins-Regular, sans-serif;
+}
 
-  input:active, input:focus {
-    font-size: 13px;
-    border: 2px solid hsl(259, 100%, 65%);
-    outline: none;
-    font-size: 20px;
-    background-color: #ffffff;
-  }
+.big-container {
+  background-color: white;
+  margin: 50px 10px;
+  border-radius: 5%;
+  border-bottom-right-radius: 25%;
+  padding: 40px 20px;
+}
 
-  .separator {
-    position: relative;
-    height: 50px;
-    margin: 10px 0;
-  }
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 25px;
+}
 
-  hr {
-    position: absolute;
-    width: 97%;
-    margin: 25px 0;
-    background: hsl(0, 1%, 62%);
-  }
+.labels {
+  text-transform: uppercase;
+  color: hsl(0, 1%, 44%);
+  font-family: Poppins-bold, sans-serif;
+}
 
-  .icon-arrow {
-    position: absolute;
-    z-index: 1;
-    margin: auto;
-    display: block;
-    background-color: hsl(259, 100%, 65%);
-    padding: 15px;
-    width: 20px;
-    left: 40%;
-    border-radius: 50%;
-    cursor: pointer;
-  }
+.inputs {
+  display: block;
+  width: 70%;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid hsl(0, 0%, 86%);
+  margin-top: 5px;
+  margin-bottom: -5px;
+  color: hsl(0, 0%, 8%);
+  font-family: Poppins-ExtraBold, sans-serif;
+  font-size: 20px;
+  padding-left: 10px;
+}
 
-  .icon-arrow:hover {
-    background-color: hsl(0, 0%, 8%);
-  }
+input:active,
+input:focus {
+  font-size: 13px;
+  border: 2px solid hsl(259, 100%, 65%);
+  outline: none;
+  font-size: 20px;
+  background-color: #fff;
+}
 
-  .cont {
-    display: flex;
-    font-size: 50px;
-    font-family: Poppins-ExtraBoldItalic, sans-serif;
-  }
+.separator {
+  position: relative;
+  height: 50px;
+  margin: 10px 0;
+}
 
-  .num {
-    color: hsl(259, 100%, 65%);
-    margin-right: 5px;
-  }
+hr {
+  position: absolute;
+  width: 97%;
+  margin: 25px 0;
+  background: hsl(0, 1%, 62%);
+}
 
-  #reqDay {
-    margin-top: -5px;
-  }
+.icon-arrow {
+  position: absolute;
+  z-index: 1;
+  margin: auto;
+  display: block;
+  background-color: hsl(259, 100%, 65%);
+  padding: 15px;
+  width: 20px;
+  left: 40%;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
-  .errorState {
-    color: hsl(0, 100%, 67%);
-    font-size: 9px;
-    font-family: Poppins-boldItalic, sans-serif;
-  }
+.icon-arrow:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.cont {
+  display: flex;
+  font-size: 50px;
+  font-family: Poppins-ExtraBoldItalic, sans-serif;
+}
+
+.num {
+  color: hsl(259, 100%, 65%);
+  margin-right: 5px;
+}
+
+#reqDay {
+  margin-top: -5px;
+}
+
+.errorState {
+  color: hsl(0, 100%, 67%);
+  font-size: 9px;
+  font-family: Poppins-boldItalic, sans-serif;
+}
 
 @media (min-width: 768px) {
   .big-container {
-    width: 520px; 
+    width: 520px;
     margin: 90px auto;
     padding: 40px 40px;
   }
@@ -161,6 +162,6 @@
     margin-bottom: -25px;
   }
 }
-  
-  .attribution { font-size: 11px; text-align: center; }
-  .attribution a { color: hsl(228, 45%, 44%); }
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
